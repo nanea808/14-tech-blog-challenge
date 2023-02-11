@@ -36,10 +36,19 @@ User.init(
   },
   {
     hooks: {
-      async beforeCreate(newUserData) {
+      beforeCreate: async (newUserData) => {
         newUserData.password = await bcrypt.hash(newUserData.password, 10);
         return newUserData;
       },
+      // beforeUpdate: async (updatedUserData) => {
+      //   if (updatedUserData.password) {
+      //   updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
+      //   } else {
+      //     console.log("Password not updated");
+      //   }
+      //   console.log("Password updated using hook");
+      //   return newUserData;
+      // }
     },
     sequelize,
     timestamps: false,
