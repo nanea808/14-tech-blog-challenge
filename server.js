@@ -1,9 +1,9 @@
-const express = require('express');
-const exphbs = require('express-handlebars');
+const express = require("express");
+const exphbs = require("express-handlebars");
 // import sequelize connection
-const sequelize = require('./config/connection.js');
+const sequelize = require("./config/connection");
 
-const routes = require('./controllers');
+const routes = require("./controllers");
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -14,5 +14,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
-    app.listen(PORT, () => console.log(`App listening on port ${PORT}!`));
+  app.listen(PORT, () =>
+    console.log(
+      `\nServer running on port ${PORT}. Visit http://localhost:${PORT} and create an account!`
+    )
+  );
 });
