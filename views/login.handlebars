@@ -1,0 +1,53 @@
+<div class="container-fluid justify-content-between align-items-center">
+  <h1 class="text-dark my-3">Login</h1>
+  {{!-- Login Form --}}
+  <form id="login">
+    <div class="my-3">
+      <label for="email1" class="form-label">Email address</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email1"
+        aria-describedby="emailHelp"
+      />
+      <div id="emailHelp" class="form-text">We'll never share your email with
+        anyone else.</div>
+    </div>
+    <div class="mb-3">
+      <label for="password1" class="form-label">Password</label>
+      <input type="password" class="form-control" id="password1" />
+    </div>
+    <button type="submit" class="btn btn-dark">Submit</button>
+  </form>
+
+  <h1 class="text-dark my-3">Sign Up</h1>
+  {{!-- Sign Up Form --}}
+  <form id="signUp">
+    <div class="my-3">
+      <label for="email2" class="form-label">Email address</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email2"
+        aria-describedby="emailHelp"
+      />
+      <div id="emailHelp" class="form-text">We'll never share your email with
+        anyone else.</div>
+    </div>
+    <div class="mb-3">
+      <label for="inputUsername" class="form-label">Username</label>
+      <input
+        type="username"
+        class="form-control"
+        id="inputUsername"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="password2" class="form-label">Password</label>
+      <input type="password" class="form-control" id="password2" />
+    </div>
+    <button type="submit" class="btn btn-dark">Submit</button>
+  </form>
+</div>
+
+<script src="./js/login.js"></script>
