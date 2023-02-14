@@ -14,16 +14,10 @@ Post.init(
     title: {
       allowNull: false,
       type: DataTypes.STRING,
-      validate: {
-        isAlphanumeric: true,
-      },
     },
     content: {
       allowNull: false,
       type: DataTypes.STRING,
-      validate: {
-        isAlphanumeric: true,
-      },
     },
     user_id: {
       type: DataTypes.INTEGER,
